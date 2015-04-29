@@ -338,6 +338,8 @@ public static class MoveButton extends JButton implements MouseMotionListener, M
  
         private int newX, newY;
         
+        private int Awidth, Aheight;
+        
         private Point pOrigen, pFinal, coordenadas;
         
         private int x, y;
@@ -347,8 +349,8 @@ public static class MoveButton extends JButton implements MouseMotionListener, M
             addMouseMotionListener(this);
             addMouseListener(this);
             addFocusListener(this);
-            
-            
+            this.Awidth = vyro.getWidth();
+            this.Aheight = vyro.getHeight();
         }
         
         @Override
@@ -396,7 +398,11 @@ public static class MoveButton extends JButton implements MouseMotionListener, M
                     }
                 }
                 
-                Vistas.Menu.txtstt.setText("x en pantalla = "+ev.getXOnScreen()+", en el boton = "+x+"; y en pantalla = "+ev.getYOnScreen()+", coord y = "+this.getY()+"; y en el boton = "+y);
+                /*if((Awidth - ev.getXOnScreen()) < x){
+                    this.setLocation(Awidth - this.getSize().width , (ev.getYOnScreen() - y) - 23);
+                }*/
+                
+                Vistas.Menu.txtstt.setText("x en pantalla = "+ev.getXOnScreen()+", en el boton = "+x+"; y en pantalla = "+ev.getYOnScreen()+", coord y = "+this.getY()+"; y en el boton = "+y+"; escrt: w = "+Awidth+", h = "+Aheight);
 
             } catch (Exception eh) {
                 JOptionPane.showMessageDialog(this, eh.getLocalizedMessage(), "Class MoveButton", 0);

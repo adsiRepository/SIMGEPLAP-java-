@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 
 /*
- @author: Grupo de Dasarrollo ADSI3
+ @author: Grupo de Dasarrollo ADSI38
 */
 public class Menu extends javax.swing.JFrame {
 
@@ -170,11 +170,10 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(btnConfigVariables_, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(534, 534, 534))
             .addGroup(EscritorioLayout.createSequentialGroup()
-                .addGap(178, 178, 178)
-                .addComponent(txtstt, javax.swing.GroupLayout.PREFERRED_SIZE, 542, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(302, 302, 302)
-                .addComponent(lbl_ActualUser, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(51, 51, 51)
+                .addComponent(txtstt)
+                .addGap(207, 207, 207)
+                .addComponent(lbl_ActualUser, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(EscritorioLayout.createSequentialGroup()
                 .addGap(312, 312, 312)
                 .addComponent(btnNewUser_, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
