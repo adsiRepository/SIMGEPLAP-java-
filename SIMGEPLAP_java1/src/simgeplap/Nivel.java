@@ -110,7 +110,7 @@ public class Nivel extends Thread{
         @SuppressWarnings("UseSpecificCatch")
         public void run() {
 
-            long retardo = 735; // milisegundos
+            long retardo = 935; // milisegundos
 
             while (true) {
                 try {
