@@ -31,14 +31,14 @@ public class SIMGEPLAP {
         ingreso.setVisible( true );*/
         
         //métodos opcionales, hacerlos comentario cuando no operen.
-        Menu f = new Menu();
-        f.setVisible(true);
+        /*Menu f = new Menu();
+        f.setVisible(true);*/
         
         //new SplashBienvenida().animar(f);
         
         //entrada por el portal de bienvenida
-        /*puerta = new Portal();
-        puerta.setVisible(true);*/
+        puerta = new Portal();
+        puerta.setVisible(true);
         //-----------------------
     
     }

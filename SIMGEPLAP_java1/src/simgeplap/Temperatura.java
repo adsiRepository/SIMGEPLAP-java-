@@ -135,7 +135,7 @@ public static class LectorTemperatura extends JPanel implements Runnable {
         @SuppressWarnings("UseSpecificCatch")
         public void run() {
 
-            long retardo = 478; // milisegundos en que tarda la aguja en indicar un nuevo valor
+            long retardo = 878; // milisegundos en que tarda la aguja en indicar un nuevo valor
 
             while (true) { // es decir que será un bucle indefinido
                 try {

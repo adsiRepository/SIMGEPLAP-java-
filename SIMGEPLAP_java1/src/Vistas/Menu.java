@@ -18,9 +18,9 @@ public class Menu extends javax.swing.JFrame {
     public static ConsolaControl ventanaControl;
     public static Historial ventanaHistorial;
 
-    /*Temperatura.LectorTemperatura panelT;
+    Temperatura.LectorTemperatura panelT;
     Nivel.LectorNivel panelN;
-    Flujo.LectorFlujo panelF;*/
+    Flujo.LectorFlujo panelF;
 
     
     public static MonitorDial monitor;
@@ -37,20 +37,20 @@ public class Menu extends javax.swing.JFrame {
             this.setExtendedState(MAXIMIZED_BOTH);
             this.setTitle("SIMGEPLAP, SENA ADSI-38");
             setIconImage(new ImageIcon(getClass().getResource("../Recursos/Imagenes/senaLog1.png")).getImage());
-            //lbl_ActualUser.setText(lbl_ActualUser.getText().concat("\t" + SIMGEPLAP.user_session));
+            lbl_ActualUser.setText(lbl_ActualUser.getText().concat("\t" + SIMGEPLAP.user_session));
         }
         
         {// instanciacion de las ventanas
-            /*ventanaNewUser = new RegUsers(Escritorio);
+            ventanaNewUser = new RegUsers(Escritorio);
             ventanaProgramacion = new GestionItinerario(Escritorio);
             ventanaControl = new ConsolaControl(Escritorio);
-            ventanaHistorial = new Historial(Escritorio);*/
+            ventanaHistorial = new Historial(Escritorio);
         }
        
-        //monitor = new MonitorDial(Escritorio);
-        //Escritorio.add(monitor);
-        //monitor.setVisible(true);
-        //monitor.toFront();
+        monitor = new MonitorDial(Escritorio);
+        Escritorio.add(monitor);
+        monitor.setVisible(true);
+        monitor.toFront();
         
         /*
         {
@@ -81,14 +81,14 @@ public class Menu extends javax.swing.JFrame {
         
       //###########  ENTORNO SEGUN USUARIO  ###############//
             
-        /*    if (!(SIMGEPLAP.rol_user.equals("Administrador"))) {
+            if (!(SIMGEPLAP.rol_user.equals("Administrador"))) {
             btnNewUser_.setVisible(false);
             }
             
             if (SIMGEPLAP.rol_user.equals("Control Tecnico") || SIMGEPLAP.rol_user.equals("Aprendiz")) {
             btnControlItinerario_.setVisible(false);
             }
-         */   
+            
         //##################################################//
 
     }
@@ -260,7 +260,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void btnControlItinerario_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnControlItinerario_ActionPerformed
         
-       /* if (ventanaProgramacion.isVisible()){
+        if (ventanaProgramacion.isVisible()){
             ventanaProgramacion.toFront();
             if (ventanaProgramacion.isIcon()){
                 try {
@@ -274,7 +274,7 @@ public class Menu extends javax.swing.JFrame {
             Escritorio.add(ventanaProgramacion);
             ventanaProgramacion.setVisible(true);
             ventanaProgramacion.toFront();
-        }*/
+        }
         
     }//GEN-LAST:event_btnControlItinerario_ActionPerformed
 
@@ -353,7 +353,7 @@ public class Menu extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
- public static void main(String args[]) {
+ /*public static void main(String args[]) {
         
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -373,7 +373,7 @@ public class Menu extends javax.swing.JFrame {
                 new Menu().setVisible(true);
             }
         });
-    } 
+    } */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JDesktopPane Escritorio;

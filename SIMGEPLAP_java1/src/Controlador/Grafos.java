@@ -59,7 +59,7 @@ import org.jfree.data.time.TimeSeriesCollection;
 // Ejemplos de los Gráficos que se pueden hacer ->  http://www.jfree.org/jfreechart/samples.html
 /**
  *
- * @author -------
+ * @author Grupo de Desarrollo ADSI-38
  */
 public class Grafos {
     //private static final long serialVersionUID = 1L;
@@ -210,7 +210,7 @@ public class Grafos {
 
     
     
-    @SuppressWarnings("FinallyDiscardsException")
+    //@SuppressWarnings("FinallyDiscardsException")
     public static byte[] chartToPNG(JFreeChart esquema /*, OutputStream ruta*/ ) {
         
         BufferedImage imagenChart = esquema.createBufferedImage(500, 300);
@@ -237,7 +237,7 @@ public class Grafos {
     //http://www.jc-mouse.net/java/anadir-splash-screen-en-javanetbeans
     public static class SplashBienvenida{
 
-        private SplashScreen splash;
+        private final SplashScreen splash;
         
         public SplashBienvenida() {
             splash = SplashScreen.getSplashScreen();
@@ -269,7 +269,7 @@ public class Grafos {
     
     //Aqui se crea y se diseña lo que será el fondo/entorno de la aplicación 
     @SuppressWarnings("serial")
-    public static class Escritorio extends JDesktopPane implements ChangeListener{ // de la clase jdesktoppane 
+    public static class Escritorio extends JDesktopPane{ // de la clase jdesktoppane 
         private final Image fondoEscritorio;
         
         public Escritorio(){
@@ -284,17 +284,10 @@ public class Grafos {
             grf.drawImage(fondoEscritorio, 0 , 0, getWidth(), getHeight(), null, this);//-(getHeight()/8)
         }
 
-        @Override
-        public void stateChanged(ChangeEvent e) {
-            
-        }
-        
     }
     
     
-    
-    
-    
+
 // Diseño del portal de inicio    
     public static class MiPortal extends JDesktopPane{
         private final Image fondoEntrada;
